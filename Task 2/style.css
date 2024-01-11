@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header,
+nav,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  grid-area: logo;
+  border-radius: 10px;
+  height: 10vh;
+  background-color: rgb(8, 139, 121);
+}
+
+.nav {
+  grid-area: nav;
+  border-radius: 10px;
+  height: 10vh;
+  background-color: gray;
+}
+
+.thumb {
+  grid-area: thumb;
+  border-radius: 10px;
+  height: 40vh;
+  background-color: rgb(8, 139, 121);
+}
+
+.hi {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "image"
+    "discription";
+}
+
+.image {
+  grid-area: image;
+  height: 25vh;
+  background-color: rgb(128, 128, 128);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disc {
+  grid-area: discription;
+}
+
+p {
+  padding-left: 5px;
+}
+
+.container1 {
+  grid-area: container1;
+  height: 40vh;
+}
+
+.container2 {
+  grid-area: container2;
+  height: 40vh;
+}
+
+.container3 {
+  grid-area: container3;
+  height: 40vh;
+}
+
+.container4 {
+  grid-area: container4;
+  height: 40vh;
+}
+
+.container5 {
+  grid-area: container5;
+  height: 40vh;
+}
+
+.container6 {
+  grid-area: container6;
+  height: 40vh;
+}
+
+.body {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "logo         nav      nav"
+    "thumb        thumb             thumb       "
+    "container1    container2         container3   "
+    "container4     container5        container6";
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  p {
+    display: none;
+  }
+
+  .body {
+    gap: 15px;
+  }
+
+  .hi {
+    padding-top: 20px;
+  }
+
+  .image {
+    padding: 6vh;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  p {
+    display: none;
+  }
+
+  a {
+    padding: 10vh;
+  }
+
+  .hi {
+    gap: 5px;
+  }
+
+  .thumb {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .body {
+    grid-template-areas:
+      "logo nav"
+      "thumb thumb"
+      "container1       container2"
+      "container3       container4"
+      "container5       container6";
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  body {
+    max-width: 576px;
+  }
+
+  p {
+    display: none;
+    position: absolute;
+  }
+
+  a {
+    padding: 15vh;
+  }
+
+  .top {
+    margin-top: -10vh;
+  }
+
+  .body {
+    grid-template-areas:
+      "logo"
+      "nav"
+      "thumb"
+      "container1"
+      "container2"
+      "container3"
+      "container4"
+      "container5"
+      "container6";
+  }
+}
